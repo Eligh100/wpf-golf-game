@@ -1,0 +1,59 @@
+C:\Users\eligh\Documents\projects\puttshack\Puttshack Project\bin\Debug\Puttshack Project.exe.config
+C:\Users\eligh\Documents\projects\puttshack\Puttshack Project\bin\Debug\Puttshack Project.exe
+C:\Users\eligh\Documents\projects\puttshack\Puttshack Project\bin\Debug\Puttshack Project.pdb
+C:\Users\eligh\Documents\projects\puttshack\Puttshack Project\obj\Debug\Puttshack Project.csprojAssemblyReference.cache
+C:\Users\eligh\Documents\projects\puttshack\Puttshack Project\obj\Debug\App.g.cs
+C:\Users\eligh\Documents\projects\puttshack\Puttshack Project\obj\Debug\Puttshack Project_MarkupCompile.cache
+C:\Users\eligh\Documents\projects\puttshack\Puttshack Project\obj\Debug\Puttshack Project_MarkupCompile.lref
+C:\Users\eligh\Documents\projects\puttshack\Puttshack Project\obj\Debug\Puttshack Project.g.resources
+C:\Users\eligh\Documents\projects\puttshack\Puttshack Project\obj\Debug\Puttshack_Project.Properties.Resources.resources
+C:\Users\eligh\Documents\projects\puttshack\Puttshack Project\obj\Debug\Puttshack Project.csproj.GenerateResource.cache
+C:\Users\eligh\Documents\projects\puttshack\Puttshack Project\obj\Debug\Puttshack Project.csproj.CoreCompileInputs.cache
+C:\Users\eligh\Documents\projects\puttshack\Puttshack Project\obj\Debug\Puttshack Project.exe
+C:\Users\eligh\Documents\projects\puttshack\Puttshack Project\obj\Debug\Puttshack Project.pdb
+C:\Users\eligh\Documents\projects\puttshack\Puttshack Project\obj\Debug\View\MainWindow.g.cs
+C:\Users\eligh\Documents\projects\puttshack\Puttshack Project\obj\Debug\View\MainWindow.baml
+C:\Users\eligh\Documents\projects\puttshack\Puttshack Project\bin\Debug\Microsoft.Xaml.Behaviors.dll
+C:\Users\eligh\Documents\projects\puttshack\Puttshack Project\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+C:\Users\eligh\Documents\projects\puttshack\Puttshack Project\bin\Debug\Microsoft.Xaml.Behaviors.xml
+C:\Users\eligh\Documents\projects\puttshack\Puttshack Project\obj\Debug\Puttshack Project.csproj.CopyComplete
+C:\Users\eligh\Documents\projects\puttshack\Puttshack Project\bin\Debug\CommonServiceLocator.dll
+C:\Users\eligh\Documents\projects\puttshack\Puttshack Project\bin\Debug\GalaSoft.MvvmLight.dll
+C:\Users\eligh\Documents\projects\puttshack\Puttshack Project\bin\Debug\GalaSoft.MvvmLight.Extras.dll
+C:\Users\eligh\Documents\projects\puttshack\Puttshack Project\bin\Debug\GalaSoft.MvvmLight.Platform.dll
+C:\Users\eligh\Documents\projects\puttshack\Puttshack Project\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\eligh\Documents\projects\puttshack\Puttshack Project\bin\Debug\GalaSoft.MvvmLight.pdb
+C:\Users\eligh\Documents\projects\puttshack\Puttshack Project\bin\Debug\GalaSoft.MvvmLight.xml
+C:\Users\eligh\Documents\projects\puttshack\Puttshack Project\bin\Debug\GalaSoft.MvvmLight.Extras.pdb
+C:\Users\eligh\Documents\projects\puttshack\Puttshack Project\bin\Debug\GalaSoft.MvvmLight.Extras.xml
+C:\Users\eligh\Documents\projects\puttshack\Puttshack Project\bin\Debug\GalaSoft.MvvmLight.Platform.pdb
+C:\Users\eligh\Documents\projects\puttshack\Puttshack Project\bin\Debug\GalaSoft.MvvmLight.Platform.xml
+C:\Users\eligh\Documents\projects\puttshack\Puttshack Project\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\eligh\Documents\projects\puttshack\Puttshack Project\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\eligh\Documents\projects\puttshack\Puttshack Project\bin\Debug\System.Buffers.dll
+C:\Users\eligh\Documents\projects\puttshack\Puttshack Project\bin\Debug\System.Memory.dll
+C:\Users\eligh\Documents\projects\puttshack\Puttshack Project\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\eligh\Documents\projects\puttshack\Puttshack Project\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\eligh\Documents\projects\puttshack\Puttshack Project\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\eligh\Documents\projects\puttshack\Puttshack Project\bin\Debug\System.Text.Json.dll
+C:\Users\eligh\Documents\projects\puttshack\Puttshack Project\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\eligh\Documents\projects\puttshack\Puttshack Project\bin\Debug\System.ValueTuple.dll
+C:\Users\eligh\Documents\projects\puttshack\Puttshack Project\bin\Debug\System.Web.Helpers.dll
+C:\Users\eligh\Documents\projects\puttshack\Puttshack Project\bin\Debug\System.Web.Razor.dll
+C:\Users\eligh\Documents\projects\puttshack\Puttshack Project\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\eligh\Documents\projects\puttshack\Puttshack Project\bin\Debug\System.Web.WebPages.dll
+C:\Users\eligh\Documents\projects\puttshack\Puttshack Project\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\eligh\Documents\projects\puttshack\Puttshack Project\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\eligh\Documents\projects\puttshack\Puttshack Project\bin\Debug\System.Buffers.xml
+C:\Users\eligh\Documents\projects\puttshack\Puttshack Project\bin\Debug\System.Memory.xml
+C:\Users\eligh\Documents\projects\puttshack\Puttshack Project\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\eligh\Documents\projects\puttshack\Puttshack Project\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\eligh\Documents\projects\puttshack\Puttshack Project\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\eligh\Documents\projects\puttshack\Puttshack Project\bin\Debug\System.Text.Json.xml
+C:\Users\eligh\Documents\projects\puttshack\Puttshack Project\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\eligh\Documents\projects\puttshack\Puttshack Project\bin\Debug\System.ValueTuple.xml
+C:\Users\eligh\Documents\projects\puttshack\Puttshack Project\bin\Debug\System.Web.Helpers.xml
+C:\Users\eligh\Documents\projects\puttshack\Puttshack Project\bin\Debug\System.Web.Razor.xml
+C:\Users\eligh\Documents\projects\puttshack\Puttshack Project\bin\Debug\System.Web.WebPages.xml
+C:\Users\eligh\Documents\projects\puttshack\Puttshack Project\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\eligh\Documents\projects\puttshack\Puttshack Project\bin\Debug\System.Web.WebPages.Razor.xml

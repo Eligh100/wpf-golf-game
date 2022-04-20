@@ -1,0 +1,25 @@
+C:\Users\eligh\Documents\projects\puttshack\Puttshack API\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\eligh\Documents\projects\puttshack\Puttshack API\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\eligh\Documents\projects\puttshack\Puttshack API\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+C:\Users\eligh\Documents\projects\puttshack\Puttshack API\bin\Debug\netcoreapp3.1\Puttshack API.exe
+C:\Users\eligh\Documents\projects\puttshack\Puttshack API\bin\Debug\netcoreapp3.1\Puttshack API.deps.json
+C:\Users\eligh\Documents\projects\puttshack\Puttshack API\bin\Debug\netcoreapp3.1\Puttshack API.runtimeconfig.json
+C:\Users\eligh\Documents\projects\puttshack\Puttshack API\bin\Debug\netcoreapp3.1\Puttshack API.runtimeconfig.dev.json
+C:\Users\eligh\Documents\projects\puttshack\Puttshack API\bin\Debug\netcoreapp3.1\Puttshack API.dll
+C:\Users\eligh\Documents\projects\puttshack\Puttshack API\bin\Debug\netcoreapp3.1\Puttshack API.pdb
+C:\Users\eligh\Documents\projects\puttshack\Puttshack API\obj\Debug\netcoreapp3.1\Puttshack API.csprojAssemblyReference.cache
+C:\Users\eligh\Documents\projects\puttshack\Puttshack API\obj\Debug\netcoreapp3.1\Puttshack API.AssemblyInfoInputs.cache
+C:\Users\eligh\Documents\projects\puttshack\Puttshack API\obj\Debug\netcoreapp3.1\Puttshack API.AssemblyInfo.cs
+C:\Users\eligh\Documents\projects\puttshack\Puttshack API\obj\Debug\netcoreapp3.1\Puttshack API.RazorTargetAssemblyInfo.cache
+C:\Users\eligh\Documents\projects\puttshack\Puttshack API\obj\Debug\netcoreapp3.1\staticwebassets\Puttshack API.StaticWebAssets.Manifest.cache
+C:\Users\eligh\Documents\projects\puttshack\Puttshack API\obj\Debug\netcoreapp3.1\staticwebassets\Puttshack API.StaticWebAssets.xml
+C:\Users\eligh\Documents\projects\puttshack\Puttshack API\obj\Debug\netcoreapp3.1\Puttshack API.dll
+C:\Users\eligh\Documents\projects\puttshack\Puttshack API\obj\Debug\netcoreapp3.1\Puttshack API.pdb
+C:\Users\eligh\Documents\projects\puttshack\Puttshack API\obj\Debug\netcoreapp3.1\Puttshack API.genruntimeconfig.cache
+C:\Users\eligh\Documents\projects\puttshack\Puttshack API\obj\Debug\netcoreapp3.1\Puttshack API.csproj.CoreCompileInputs.cache
+C:\Users\eligh\Documents\projects\puttshack\Puttshack API\obj\Debug\netcoreapp3.1\Puttshack API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\eligh\Documents\projects\puttshack\Puttshack API\bin\Debug\netcoreapp3.1\System.Net.Http.Formatting.dll
+C:\Users\eligh\Documents\projects\puttshack\Puttshack API\bin\Debug\netcoreapp3.1\System.Web.Http.dll
+C:\Users\eligh\Documents\projects\puttshack\Puttshack API\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\eligh\Documents\projects\puttshack\Puttshack API\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+C:\Users\eligh\Documents\projects\puttshack\Puttshack API\obj\Debug\netcoreapp3.1\Puttshack API.csproj.CopyComplete

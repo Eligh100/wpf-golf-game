@@ -1,0 +1,426 @@
+﻿<Window x:Class="Puttshack_Project.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Puttshack_Project"
+        mc:Ignorable="d"
+        Title="Puttshack Task" Height="450" Width="800"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Background="#ffffff"
+        >
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="Converter" />
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+
+        <Grid Background="#0F0F2D"
+              Grid.ColumnSpan="2"
+              MouseDown="Grid_MouseDown">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock 
+                Text="Puttshack Game"
+                Foreground="White"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                FontFamily="pack://application:,,,/Fonts/#Dosis"
+                FontWeight="Medium"
+            />
+
+            <Button
+                Click="Quit_Click"      
+                Grid.Column="8"
+                Grid.ColumnSpan="2"
+                Panel.ZIndex="100"
+                Content="Quit" 
+                Foreground="White"
+                FontWeight="Medium"
+                FontSize="10"
+            >
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="TextElement.FontFamily" Value="pack://application:,,,/Fonts/#Dosis"/>
+                        <Setter Property="Background" Value="#f02416"/>
+                        <Setter Property="Cursor" Value="Hand"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#c70d00"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Width="75" 
+                                Height="15"
+                                CornerRadius="8"
+                                Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="0.8*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock 
+                    Text="{Binding CurrentMove}"
+                    Height="70"            
+                    Width="600"  
+                    Foreground="Black"
+                    TextAlignment="Center"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Margin="0,20,0,0"
+                    FontFamily="pack://application:,,,/Fonts/#Dosis"
+                    FontWeight="Medium"
+                    FontSize="40"
+                />
+            </Grid>
+
+
+            <Image x:Name="StartImg" HorizontalAlignment="Center" Grid.Row="1" Width="200" Height="200"
+                       Source="pack://application:,,,/Images/ball.png"
+                       Visibility="{Binding Path=ShowStartSplash, Converter={StaticResource Converter}}"
+                   />
+
+            <Image x:Name="BallOnTeeImg" HorizontalAlignment="Center" Grid.Row="1" Width="200" Height="200"
+                       Source="pack://application:,,,/Images/tee.png">
+                <Image.RenderTransform>
+                    <RotateTransform Angle="0"/>
+                </Image.RenderTransform>
+                <Image.Style>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="Visibility" Value="Hidden"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding CurrentMove}" Value="Ball On Tee">
+                                <Setter Property="Visibility" Value="Visible"/>
+                                <DataTrigger.EnterActions>
+                                    <BeginStoryboard Name="teeAnim">
+                                        <Storyboard>
+                                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.(RotateTransform.Angle)"
+                                                             To="360" 
+                                                             Duration="0:0:0.75" />
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </DataTrigger.EnterActions>
+                                <DataTrigger.ExitActions>
+                                    <RemoveStoryboard BeginStoryboardName="teeAnim"/>
+                                </DataTrigger.ExitActions>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Image.Style>
+            </Image>
+
+            <Image x:Name="RegularShotImage" HorizontalAlignment="Center" Grid.Row="1" Width="200" Height="200"
+                       Source="pack://application:,,,/Images/regular.png">
+                <Image.RenderTransform>
+                    <ScaleTransform ScaleX="1"/>
+                </Image.RenderTransform>
+                <Image.Style>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="Visibility" Value="Hidden"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding CurrentMove}" Value="Regular Shot">
+                                <Setter Property="Visibility" Value="Visible"/>
+                                <DataTrigger.EnterActions>
+                                    <BeginStoryboard Name="regularAnim">
+                                        <Storyboard>
+                                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.(ScaleTransform.ScaleX)"
+                                                             To="-1" 
+                                                             Duration="0:0:2"
+                                                             RepeatBehavior="Forever"/>
+                                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.(ScaleTransform.ScaleX)"
+                                                             To="1" 
+                                                             Duration="0:0:2"
+                                                             RepeatBehavior="Forever"/>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </DataTrigger.EnterActions>
+                                <DataTrigger.ExitActions>
+                                    <RemoveStoryboard BeginStoryboardName="regularAnim"/>
+                                </DataTrigger.ExitActions>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Image.Style>
+            </Image>
+
+            <Image x:Name="SuperTubeImg" HorizontalAlignment="Center" Grid.Row="1" Width="200" Height="200"
+                       Source="pack://application:,,,/Images/supertube.png" Margin="0, 0, 50, 100"
+            >
+                <Image.RenderTransform>
+                    <ScaleTransform ScaleX="1" ScaleY="1"/>
+                </Image.RenderTransform>
+                <Image.Style>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="Visibility" Value="Hidden"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding CurrentMove}" Value="Supertube Activated!">
+                                <Setter Property="Visibility" Value="Visible"/>
+                                <DataTrigger.EnterActions>
+                                    <BeginStoryboard Name="superAnim">
+                                        <Storyboard>
+                                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.(ScaleTransform.ScaleX)"
+                                                             To="2.5" 
+                                                             Duration="0:0:2"
+                                                             RepeatBehavior="Forever"/>
+                                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.(ScaleTransform.ScaleX)"
+                                                             To="1" 
+                                                             Duration="0:0:2"
+                                                             RepeatBehavior="Forever"/>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.(ScaleTransform.ScaleY)"
+                                                             To="2.5" 
+                                                             Duration="0:0:2"
+                                                             RepeatBehavior="Forever"/>
+                                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.(ScaleTransform.ScaleY)"
+                                                             To="1" 
+                                                             Duration="0:0:2"
+                                                             RepeatBehavior="Forever"/>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </DataTrigger.EnterActions>
+                                <DataTrigger.ExitActions>
+                                    <RemoveStoryboard BeginStoryboardName="superAnim"/>
+                                </DataTrigger.ExitActions>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Image.Style>
+            </Image>
+
+            <Image x:Name="HazardImg" HorizontalAlignment="Center" Grid.Row="1" Width="200" Height="200"
+                       Source="pack://application:,,,/Images/hazard.png"
+            >
+                <Image.RenderTransform>
+                    <TranslateTransform X="-50"/>
+                </Image.RenderTransform>
+                <Image.Style>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="Visibility" Value="Hidden"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding CurrentMove}" Value="Hazard Activated!">
+                                <Setter Property="Visibility" Value="Visible"/>
+                                <DataTrigger.EnterActions>
+                                    <BeginStoryboard Name="hazardAnim">
+                                        <Storyboard>
+                                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.(TranslateTransform.X)"
+                                                             To="300" 
+                                                             Duration="0:0:3"
+                                                             RepeatBehavior="Forever"/>
+                                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.(TranslateTransform.X)"
+                                                             To="-50" 
+                                                             Duration="0:0:3"
+                                                             RepeatBehavior="Forever"/>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </DataTrigger.EnterActions>
+                                <DataTrigger.ExitActions>
+                                    <RemoveStoryboard BeginStoryboardName="hazardAnim"/>
+                                </DataTrigger.ExitActions>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Image.Style>
+            </Image>
+
+            <Image x:Name="BonusImg" HorizontalAlignment="Center" Grid.Row="1" Width="200" Height="200"
+                       Source="pack://application:,,,/Images/bonus.png"
+            >
+                <Image.RenderTransform>
+                    <ScaleTransform ScaleX="1"/>
+                </Image.RenderTransform>
+                <Image.Style>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="Visibility" Value="Hidden"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding CurrentMove}" Value="Bonus Points Activated!">
+                                <Setter Property="Visibility" Value="Visible"/>
+                                <DataTrigger.EnterActions>
+                                    <BeginStoryboard Name="bonusAnim">
+                                        <Storyboard Duration="0:0:1" RepeatBehavior="Forever">
+                                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.(ScaleTransform.ScaleX)"
+                                                             To="-1" 
+                                                             Duration="0:0:0.5"
+                                                             />
+                                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.(ScaleTransform.ScaleX)"
+                                                             To="1" 
+                                                             Duration="0:0:0.5"
+                                                             />
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </DataTrigger.EnterActions>
+                                <DataTrigger.ExitActions>
+                                    <RemoveStoryboard BeginStoryboardName="bonusAnim"/>
+                                </DataTrigger.ExitActions>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Image.Style>
+            </Image>
+
+            <Image x:Name="WinImg" HorizontalAlignment="Center" Grid.Row="1" Width="200" Height="200"
+                       Source="pack://application:,,,/Images/win.png"
+            >
+                <Image.RenderTransform>
+                    <RotateTransform Angle="0"/>
+                </Image.RenderTransform>
+                <Image.Style>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="Visibility" Value="Hidden"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding CurrentMove}" Value="Ball in Hole!">
+                                <Setter Property="Visibility" Value="Visible"/>
+                                <DataTrigger.EnterActions>
+                                    <BeginStoryboard Name="winAnim">
+                                        <Storyboard Duration="0:0:1" RepeatBehavior="Forever">
+                                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.(RotateTransform.Angle)"
+                                                             To="360" 
+                                                             Duration="0:0:0.5" />
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </DataTrigger.EnterActions>
+                                <DataTrigger.ExitActions>
+                                    <RemoveStoryboard BeginStoryboardName="winAnim"/>
+                                </DataTrigger.ExitActions>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Image.Style>
+            </Image>
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <Button
+                    Command="{Binding NextMoveCommand}"
+                    Panel.ZIndex="100"
+                    Content="Next Move" 
+                    Foreground="White"
+                    FontWeight="Medium"
+                    FontSize="20"
+                    Visibility="{Binding Path=IsGameStarted, Converter={StaticResource Converter}}"
+            >
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="TextElement.FontFamily" Value="pack://application:,,,/Fonts/#Dosis"/>
+                        <Setter Property="Background" Value="#fe6584"/>
+                        <Setter Property="Cursor" Value="Hand"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#ff4c70"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Width="125" 
+                                Height="35"
+                                CornerRadius="12"
+                                Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+            <Button
+                    Command="{Binding StartGameCommand}"
+                    Panel.ZIndex="100"
+                    Content="Start Game" 
+                    Foreground="White"
+                    FontWeight="Medium"
+                    FontSize="20"
+                    Visibility="{Binding Path=CanGameBeStarted, Converter={StaticResource Converter}}"
+            >
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="TextElement.FontFamily" Value="pack://application:,,,/Fonts/#Dosis"/>
+                        <Setter Property="Background" Value="#fe6584"/>
+                        <Setter Property="Cursor" Value="Hand"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#ff4c70"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Width="125" 
+                                Height="35"
+                                CornerRadius="12"
+                                Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+            <TextBlock 
+                    Text="{Binding ScoreText}"
+                    Height="30"            
+                    Width="400"            
+                    Foreground="Black"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Center"
+                    TextAlignment="Center"
+                    FontFamily="pack://application:,,,/Fonts/#Dosis"
+                    FontWeight="Medium"
+                    FontSize="30"
+            />
+
+
+            <TextBlock 
+                    Text="{Binding MoveText}"
+                    Height="30"            
+                    Width="400"            
+                    Foreground="Black"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center"
+                    TextAlignment="Center"
+                    FontFamily="pack://application:,,,/Fonts/#Dosis"
+                    FontWeight="Medium"
+                    FontSize="30"
+            />
+        </Grid>
+
+       
+    </Grid>
+</Window>
